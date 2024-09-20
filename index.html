@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爬虫知识分享</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 基本的内联样式，以防 CSS 文件未正确加载 */
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; }
+        header { background-color: #4CAF50; color: white; padding: 20px; text-align: center; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>爬虫知识分享</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#intro">简介</a></li>
+            <li><a href="#basics">基础知识</a></li>
+            <li><a href="#libraries">爬虫库</a></li>
+            <li><a href="#parsing">数据解析</a></li>
+            <li><a href="#techniques">技巧与工具</a></li>
+            <li><a href="#ethics">道德与法律</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="intro">
+            <h2>爬虫简介</h2>
+            <p>网络爬虫是一种自动化程序,用于从网页中提取数据。</p>
+        </section>
+        
+        <section id="basics">
+            <h2>基础知识</h2>
+            <ul>
+                <li>HTTP请求：了解GET、POST等方法</li>
+                <li>HTML结构：掌握标签、属性的概念</li>
+                <li>数据存储：熟悉CSV、JSON等格式</li>
+            </ul>
+        </section>
+        
+        <section id="libraries">
+            <h2>常用爬虫库</h2>
+            <ul>
+                <li>
+                    <h3>Requests</h3>
+                    <p>Python中最流行的HTTP库，用于发送HTTP/1.1请求。简单易用，支持会话、Cookie、认证等功能。</p>
+                    <pre><code>import requests
+response = requests.get('https://example.com')
+print(response.text)</code></pre>
+                </li>
+                <li>
+                    <h3>Scrapy</h3>
+                    <p>一个强大的爬虫框架，适合大规模爬取。提供了完整的爬虫工作流，包括数据提取、处理和存储。</p>
+                </li>
+            </ul>
+        </section>
+        
+        <section id="parsing">
+            <h2>数据解析</h2>
+            <ul>
+                <li>
+                    <h3>BeautifulSoup</h3>
+                    <p>用于解析HTML和XML文件的库，可以轻松地从网页中提取数据。</p>
+                    <pre><code>from bs4 import BeautifulSoup
+soup = BeautifulSoup(html_doc, 'html.parser')
+print(soup.title.string)</code></pre>
+                </li>
+                <li>
+                    <h3>lxml</h3>
+                    <p>一个高效的库，用于处理XML和HTML。它支持XPath，性能优于BeautifulSoup。</p>
+                </li>
+            </ul>
+        </section>
+        
+        <section id="techniques">
+            <h2>技巧与工具</h2>
+            <ul>
+                <li>处理JavaScript: 使用Selenium模拟浏览器行为</li>
+                <li>并发爬取: 利用asyncio提高爬取效率</li>
+                <li>代理池: 使用多个IP地址避免被封禁</li>
+                <li>User-Agent轮换: 模拟不同的浏览器请求</li>
+            </ul>
+        </section>
+        
+        <section id="ethics">
+            <h2>道德与法律</h2>
+            <p>在进行网络爬虫时,请遵守网站的robots.txt规则和相关法律法规。</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 爬虫知识分享. 保留所有权利。</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // 基本的内联脚本，以确保 JavaScript 正常工作
+        console.log("页面已加载");
+    </script>
+</body>
+</html>
